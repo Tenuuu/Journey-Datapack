@@ -77,7 +77,7 @@
                     "type": "origins:apply_effect",
                     "effect": {
                         "id": "journey:damage_aura",
-                        "duration": 20,
+                        "duration": 10,
                         "amplifier": 0,
                         "show_particles": false
                     }
