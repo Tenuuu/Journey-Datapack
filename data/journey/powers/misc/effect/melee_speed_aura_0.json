@@ -1,0 +1,16 @@
+{
+    "type": "origins:conditioned_attribute",
+    "hidden": true,
+    "modifier": {
+        "id": "melee_speed_aura",
+        "attribute": "minecraft:generic.attack_speed",
+        "operation": "multiply_base_additive",
+        "amount": 0.1
+    },
+    "condition": {
+        "type": "origins:status_effect",
+        "effect": "journey:melee_speed_aura",
+        "min_amplifier": 0,
+        "max_amplifier": 0
+    }
+}

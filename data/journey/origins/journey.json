@@ -5,6 +5,7 @@
 		"journey:misc/default_safe_fall",
 		"journey:misc/prevent_item_pickup",
 		"journey:misc/effect/damage_aura_0",
+		"journey:misc/effect/melee_speed_aura_0",
 		"journey:misc/stamina/drain",
 		"journey:misc/stamina/gain_cooldown",
 		"journey:misc/stamina/gain",
