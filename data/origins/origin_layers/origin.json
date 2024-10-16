@@ -1,0 +1,8 @@
+{
+    "origins": [
+		    "journey:journey"
+    ],
+    "enabled": true,
+    "allow_random": false,
+    "default_origin": "journey:journey"
+}

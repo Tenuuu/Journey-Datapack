@@ -1,0 +1,192 @@
+{   
+    "type": "origins:multiple",
+    "hidden": true,
+    "slot1": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot1",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 2
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude\",Slot:0}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+
+    "slot2": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot2",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 2
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude\",Slot:1}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    
+    "slot3": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot3",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 2
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude\",Slot:2}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "slot1_1": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot1_1",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 3
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_1\",Slot:0}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+
+    "slot2_1": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot2_1",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 3
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_1\",Slot:1}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    
+    "slot3_1": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot3_1",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 3
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_1\",Slot:2}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "slot1_2": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot1_2",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 4
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_2\",Slot:0}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+
+    "slot2_2": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot2_2",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 4
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_2\",Slot:1}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    
+    "slot3_2": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot3_2",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 4
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_2\",Slot:2}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "slot1_3": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot1_3",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 5
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_3\",Slot:0}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+
+    "slot2_3": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot2_3",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 5
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_3\",Slot:1}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    
+    "slot3_3": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "journey:ring_fortitude_slot3_3",
+            "attribute": "minecraft:generic.max_health",
+            "operation": "add_value",
+            "amount": 5
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:ring_of_fortitude_3\",Slot:2}].count",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    }
+}

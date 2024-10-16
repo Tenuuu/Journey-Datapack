@@ -1,0 +1,22 @@
+{
+	"type": "origins:action_over_time",
+	"hidden": true,
+	"rising_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "tellraw @a {\"text\":\"\",\"extra\":[{\"selector\":\"@s\"},{\"text\":\" has started a Raid!\",\"color\":\"white\"}]}"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "execute at @a run playsound minecraft:event.mob_effect.raid_omen ambient @a ~ ~1 ~ 0.5 2"
+			}
+		]
+	},
+	"interval": 1,
+	"condition": {
+		"type": "origins:status_effect",
+		"effect": "minecraft:raid_omen"
+	}
+}

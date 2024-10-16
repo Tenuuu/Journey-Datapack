@@ -1,0 +1,84 @@
+{
+    "type": "origins:resource",
+    "hidden": true,
+    "min": 0,
+    "max": 300,
+    "start_value": 300,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 2,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:riding",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:any_of",
+                    "conditions": [
+                        {
+                            "type": "origins:gamemode",
+                            "gamemode": "survival"
+                        },
+                        {
+                            "type": "origins:gamemode",
+                            "gamemode": "adventure"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "min_action": [
+        {
+            "type": "origins:change_resource",
+            "resource": "journey:misc/stamina/low_stamina_resource",
+            "change": 1
+        },
+        {
+            "type": "origins:play_sound",
+            "sound": "minecraft:block.respawn_anchor.deplete",
+            "pitch": 1.66,
+            "volume": 0.25
+        },
+        {
+            "type": "origins:play_sound",
+            "sound": "minecraft:entity.player.breath",
+            "pitch": 1.66,
+            "volume": 0.5
+        }
+    ],
+    "max_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "journey:misc/stamina/low_stamina_resource",
+            "compare_to": 1,
+            "comparison": "=="
+        },
+        "if_action": [
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.respawn_anchor.charge",
+                "pitch": 1.4,
+                "volume": 0.25
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.player.breath",
+                "pitch": 0.9,
+                "volume": 0.5
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "journey:misc/stamina/low_stamina_resource",
+                "change": -1
+            }
+        ],
+        "else_action": {
+            "type": "origins:nothing"
+        }
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+
+    "set": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "id": "leather",
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "add_multiplied_base",
+            "amount": 0.15
+        },
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "item": "minecraft:leather_helmet"
+                            }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "chest",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "item": "minecraft:leather_chestplate"
+                            }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "feet",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "item": "minecraft:leather_boots"
+                            }
+                    }
+                }
+            ]
+        }
+    },
+
+    "set2": {
+        "type": "origins:action_over_time",
+        "hidden": true,
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "journey:misc/stamina/stamina",
+            "change": 4
+        },
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "journey:misc/stamina/gain_cooldown",
+                    "compare_to": 0,
+                    "comparison": "=="
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "head",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "item": "minecraft:leather_helmet"
+                            }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "chest",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "item": "minecraft:leather_chestplate"
+                            }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "feet",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "item": "minecraft:leather_boots"
+                            }
+                    }
+                }
+            ]  
+        }
+    },
+
+    "helmet": {
+        "type": "origins:action_over_time",
+        "hidden": true,
+        "rising_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.head",
+            "stack": {
+                "id": "minecraft:leather_helmet"
+            }
+        },
+        "falling_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.head",
+            "stack": {
+                "id": "minecraft:air"
+            }
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:leather_chestplate"
+                }
+            }
+        }
+    },
+
+    "boots": {
+        "type": "origins:action_over_time",
+        "hidden": true,
+        "rising_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.feet",
+            "stack": {
+                "id": "minecraft:leather_boots"
+            }
+        },
+        "falling_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.feet",
+            "stack": {
+                "id": "minecraft:air"
+            }
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:leather_chestplate"
+                }
+            }
+        }
+    }
+}

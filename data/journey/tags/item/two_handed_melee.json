@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "#c:tools/glaives",
+        "#c:tools/quarterstaves",
+        "#c:tools/spear"
+    ]
+}

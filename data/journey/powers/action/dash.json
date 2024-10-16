@@ -1,0 +1,52 @@
+{
+	"type": "origins:multiple",
+	"dash": {
+		"type": "origins:active_self",
+		"entity_action": [
+			{
+				"type": "origins:add_velocity",
+				"z": 0.8,
+				"space": "local_horizontal",
+				"client": false
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "journey:misc/stamina/stamina",
+				"change": -300
+			},
+			{
+                "type": "origins:trigger_cooldown",
+                "power": "journey:misc/stamina/gain_cooldown"
+            },
+			{
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:entity.player.attack.sweep player @s ~ ~ ~ 0.5 0.4"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "particle minecraft:campfire_cosy_smoke ~ ~ ~ 0.3 0.3 0.3 0.01 10 force"
+			}
+		],
+		"key": {
+			"key": "key.origins.primary_active"
+		},
+		"condition": {	
+			"type": "origins:all_of",
+			"conditions": [
+				{
+					"type": "origins:fall_flying",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "journey:misc/stamina/stamina",
+					"comparison": "==",
+					"compare_to": 300
+				},
+				{
+					"type": "origins:on_block"
+				}
+			]
+		}
+	}
+}

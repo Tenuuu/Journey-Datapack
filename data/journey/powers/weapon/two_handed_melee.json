@@ -1,0 +1,97 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    
+    "prevent_attack": {
+        "type": "origins:modify_damage_dealt",
+        "hidden": true,
+        "modifier": {
+            "id": "two_handed_melee",
+            "operation": "multiply_base_multiplicative",
+            "amount": -1
+        },
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:empty",
+                        "inverted": true
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient":
+                            {
+                                "tag": "journey:two_handed_melee"
+                            }
+                    }
+                }
+            ]
+        } 
+    },
+
+    "prevent_use": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": 
+                {
+                    "tag": "journey:two_handed_melee"
+                }
+        },
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:empty",
+                        "inverted": true
+                    }
+                }
+            ]
+        } 
+    },
+
+    "warning1": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.attack"
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "title @s actionbar \"This item requires two hands to use\""
+        },
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "offhand",
+                    "item_condition": {
+                        "type": "origins:empty",
+                        "inverted": true
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": 
+                            {
+                                "tag": "journey:two_handed_melee"
+                            }
+                    }
+                }
+            ] 
+        }
+    }
+}

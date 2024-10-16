@@ -1,0 +1,13 @@
+{
+    "type": "apoli:active_self",
+    "entity_action": {
+        "type": "apoli:show_toast",
+        "title": "Journal Updated",
+        "description": "New info added to Journal!",
+        "icon": {
+            "id": "minecraft:book"
+        },
+        "duration": 120
+    },
+    "key": "key.jump"
+}

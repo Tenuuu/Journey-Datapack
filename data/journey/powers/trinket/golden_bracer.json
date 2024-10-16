@@ -1,0 +1,30 @@
+{   
+    "type": "origins:modify_damage_dealt",
+    "hidden": true,
+    "modifier": {
+        "id": "journey:golden_bracer_slot",
+        "operation": "add_base_early",
+        "amount": 4
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:command",
+                "command": "data get entity @s cardinal_components.\"trinkets:trinkets\".main_data.AccessoriesContainers.trinket.Items[{id:\"journey:golden_bracer\"}].count",
+                "comparison": "==",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "minecraft:axes"
+                    }
+                }
+            }
+        ]
+    }
+}

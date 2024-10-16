@@ -1,0 +1,94 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+
+    "helmet": {
+        "type": "origins:action_over_time",
+        "hidden": true,
+        "rising_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.head",
+            "stack": {
+                "id": "minecraft:golden_helmet"
+            }
+        },
+        "falling_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.head",
+            "stack": {
+                "id": "minecraft:air"
+            }
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:golden_chestplate"
+                }
+            }
+        }
+    },
+
+    "leggings": {
+        "type": "origins:action_over_time",
+        "hidden": true,
+        "rising_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.legs",
+            "stack": {
+                "id": "minecraft:golden_leggings"
+            }
+        },
+        "falling_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.legs",
+            "stack": {
+                "id": "minecraft:air"
+            }
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:golden_chestplate"
+                }
+            }
+        }
+    },
+
+    "boots": {
+        "type": "origins:action_over_time",
+        "hidden": true,
+        "rising_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.feet",
+            "stack": {
+                "id": "minecraft:golden_boots"
+            }
+        },
+        "falling_action": {
+            "type": "origins:replace_inventory",
+            "slot": "armor.feet",
+            "stack": {
+                "id": "minecraft:air"
+            }
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:golden_chestplate"
+                }
+            }
+        }
+    }
+}

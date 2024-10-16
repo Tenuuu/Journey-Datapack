@@ -1,0 +1,16 @@
+{
+    "type": "origins:action_over_time",
+    "hidden": true,
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:change_resource",
+        "resource": "journey:misc/stamina/stamina",
+        "change": 6
+    },
+    "condition": {
+        "type": "origins:resource",
+        "resource": "journey:misc/stamina/gain_cooldown",
+        "compare_to": 0,
+        "comparison": "=="
+    }
+}

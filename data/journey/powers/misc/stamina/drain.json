@@ -1,0 +1,55 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "running": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": [
+            {
+                "type": "origins:change_resource",
+                "resource": "journey:misc/stamina/stamina",
+                "change": -5
+            },
+            {
+                "type": "origins:trigger_cooldown",
+                "power": "journey:misc/stamina/gain_cooldown"
+            }
+        ],
+        "condition": {
+            "type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:sprinting"
+                },
+                {
+                    "type": "origins:sneaking",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:swimming",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:fall_distance",
+                    "compare_to": 2,
+                    "comparison": "<"
+                },
+                {
+                    "type": "origins:gamemode",
+                    "gamemode": "survival"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "farmersdelight:nourishment",
+                    "inverted": true
+                }
+            ]
+            
+        }
+    }
+}

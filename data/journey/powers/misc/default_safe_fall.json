@@ -1,0 +1,10 @@
+{
+    "type": "origins:attribute",
+    "hidden": true,
+    "modifier": {
+        "id": "journey:additional_safe_fall",
+        "attribute": "minecraft:generic.safe_fall_distance",
+        "operation": "add_value",
+        "amount": 3
+    }
+}

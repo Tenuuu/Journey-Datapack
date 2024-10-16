@@ -1,0 +1,15 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "hidden": true,
+    "modifier": {
+        "id": "damage_aura",
+        "operation": "multiply_base_additive",
+        "amount": 0.1
+    },
+    "condition": {
+        "type": "origins:status_effect",
+        "effect": "journey:damage_aura",
+        "min_amplifier": 0,
+        "max_amplifier": 0
+    }
+}

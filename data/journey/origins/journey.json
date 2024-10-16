@@ -1,0 +1,29 @@
+{
+	"powers": [
+		"journey:misc/event_announce_raid",
+		"journey:misc/event_announce_ominous_event",
+		"journey:misc/default_safe_fall",
+		"journey:misc/prevent_item_pickup",
+		"journey:misc/effect/damage_aura_0",
+		"journey:misc/stamina/drain",
+		"journey:misc/stamina/gain_cooldown",
+		"journey:misc/stamina/gain",
+		"journey:misc/stamina/low_stamina",
+		"journey:misc/stamina/stamina",
+		"journey:misc/attack_speed_increase",
+		"journey:weapon/two_handed_ranged",
+		"journey:weapon/two_handed_melee",
+		"journey:armor/iron_armor",
+		"journey:armor/leather_armor",
+		"journey:armor/chainmail_armor",
+		"journey:armor/golden_armor",
+		"journey:armor/diamond_armor",
+		"journey:armor/netherite_armor",
+		"journey:action/dash"
+	],
+	"id": "minecraft:dirt",
+	"order": 10,
+	"impact": 0,
+	"name": "Journey",
+	"description": "Journey's code"
+}
