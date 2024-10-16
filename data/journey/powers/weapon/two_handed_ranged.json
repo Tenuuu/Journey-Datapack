@@ -56,10 +56,15 @@
                     "item_condition": {
                         "type": "origins:ingredient",
                         "inverted": true,
-                        "ingredient":
+                        "ingredient": [
                             {
                                 "tag": "minecraft:arrows"
+                            },
+                            {
+                                "item": "minecraft:air"
                             }
+                        ]
+                            
                     }
                 },
                 {
@@ -95,10 +100,14 @@
                     "item_condition": {
                         "type": "origins:ingredient",
                         "inverted": true,
-                        "ingredient":
+                        "ingredient": [
                             {
                                 "tag": "minecraft:arrows"
+                            },
+                            {
+                                "item": "minecraft:air"
                             }
+                        ]
                     }
                 },
                 {
