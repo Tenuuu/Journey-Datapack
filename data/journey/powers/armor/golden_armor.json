@@ -86,7 +86,7 @@
         "modifier": {
             "id": "golden_melee_speed",
             "attribute": "minecraft:generic.attack_speed",
-            "operation": "multiply_base_additive",
+            "operation": "add_multiplied_base",
             "amount": 0.15
         },
         "condition": {

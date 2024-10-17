@@ -4,7 +4,7 @@
     "modifier": {
         "id": "melee_speed_aura",
         "attribute": "minecraft:generic.attack_speed",
-        "operation": "multiply_base_additive",
+        "operation": "add_multiplied_base",
         "amount": 0.1
     },
     "condition": {
