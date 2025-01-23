@@ -2,8 +2,8 @@
     "type": "origins:resource",
     "hidden": true,
     "min": 0,
-    "max": 300,
-    "start_value": 300,
+    "max": 1000,
+    "start_value": 1000,
     "hud_render": {
         "should_render": true,
         "bar_index": 2,
@@ -27,6 +27,12 @@
                             "gamemode": "adventure"
                         }
                     ]
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "journey:misc/stamina/stamina",
+                    "compare_to": 1000,
+                    "comparison": "<"
                 }
             ]
         }
@@ -36,18 +42,6 @@
             "type": "origins:change_resource",
             "resource": "journey:misc/stamina/low_stamina_resource",
             "change": 1
-        },
-        {
-            "type": "origins:play_sound",
-            "sound": "minecraft:block.respawn_anchor.deplete",
-            "pitch": 1.66,
-            "volume": 0.25
-        },
-        {
-            "type": "origins:play_sound",
-            "sound": "minecraft:entity.player.breath",
-            "pitch": 1.66,
-            "volume": 0.5
         }
     ],
     "max_action": {
@@ -60,16 +54,8 @@
         },
         "if_action": [
             {
-                "type": "origins:play_sound",
-                "sound": "minecraft:block.respawn_anchor.charge",
-                "pitch": 1.4,
-                "volume": 0.25
-            },
-            {
-                "type": "origins:play_sound",
-                "sound": "minecraft:entity.player.breath",
-                "pitch": 0.9,
-                "volume": 0.5
+                "type": "origins:execute_command",
+                "command": "playsound minecraft:block.note_block.bell neutral @p ~ ~ ~ 1 1.75"
             },
             {
                 "type": "origins:change_resource",

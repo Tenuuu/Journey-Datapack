@@ -5,7 +5,7 @@
     "entity_action": {
         "type": "origins:change_resource",
         "resource": "journey:misc/stamina/stamina",
-        "change": 6
+        "change": 20
     },
     "condition": {
         "type": "origins:resource",

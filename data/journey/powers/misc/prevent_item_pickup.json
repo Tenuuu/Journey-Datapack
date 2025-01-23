@@ -1,3 +1,7 @@
 {
-    "type": "origins:prevent_item_pickup"
+    "type": "origins:prevent_item_pickup",
+    "condition": {
+        "type": "origins:sneaking",
+        "inverted": true
+    }
 }

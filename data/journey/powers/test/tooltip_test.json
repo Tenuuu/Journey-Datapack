@@ -1,0 +1,40 @@
+{
+    "type": "origins:tooltip",
+    "order": 0,
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:iron_axe"
+        }
+    },
+    "texts": [
+        {
+            "text": "\uE074\uE0A3\uE0A5"
+        },
+        {
+            "text": " "
+        },
+        {
+            "text": "Ⓥ §7Spin Attack Move"
+        },
+        {
+            "text": "Ⓥ §7Disables Shields"
+        },
+        {
+            "text": " "
+        },
+        {
+            "text": "Stats:",
+            "color": "gray"
+        },
+        {
+            "text": " ⓪ \u2705\uE07A"
+        },
+        {
+            "text": " ⑧ \u2711\uE084"
+        },
+        {
+            "text": " ⑮ \u2723\uE096"
+        }
+    ]
+}

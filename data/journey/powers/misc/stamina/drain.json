@@ -8,7 +8,7 @@
             {
                 "type": "origins:change_resource",
                 "resource": "journey:misc/stamina/stamina",
-                "change": -5
+                "change": -10
             },
             {
                 "type": "origins:trigger_cooldown",
@@ -50,6 +50,31 @@
                 }
             ]
             
+        }
+    },
+
+    "shield": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": [
+            {
+                "type": "origins:change_resource",
+                "resource": "journey:misc/stamina/stamina",
+                "change": -10
+            },
+            {
+                "type": "origins:trigger_cooldown",
+                "power": "journey:misc/stamina/gain_cooldown"
+            }
+        ],
+        "condition": {
+            "type": "origins:using_item",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:shield"
+                }
+            }
         }
     }
 }

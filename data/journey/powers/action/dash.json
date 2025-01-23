@@ -13,7 +13,7 @@
 			{
 				"type": "origins:change_resource",
 				"resource": "journey:misc/stamina/stamina",
-				"change": -300
+				"change": -1000
 			},
 			{
                 "type": "origins:trigger_cooldown",
@@ -29,7 +29,7 @@
 			}
 		],
 		"key": {
-			"key": "key.origins.primary_active"
+			"key": "key.sprint"
 		},
 		"condition": {	
 			"type": "origins:all_of",
@@ -42,11 +42,46 @@
 					"type": "origins:resource",
 					"resource": "journey:misc/stamina/stamina",
 					"comparison": "==",
-					"compare_to": 300
+					"compare_to": 1000
 				},
 				{
 					"type": "origins:on_block"
+				},
+				{
+                    "type": "origins:submerged_in",
+					"fluid": "minecraft:water",
+					"inverted": true
+				},
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:fluid",
+						"fluid_condition": {
+							"type": "origins:in_tag",
+							"tag": "minecraft:water"
+						}
+					},
+					"inverted": true
 				}
+			]
+		}
+	},
+	"disable_sprint": {
+		"type": "origins:prevent_sprinting",
+		"condition": {
+			"type": "origins:all_of",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+					"fluid": "minecraft:water",
+					"inverted": true
+				},
+				{
+            		"type": "origins:resource",
+            		"resource": "journey:misc/stamina/low_stamina",
+            		"compare_to": 0,
+            		"comparison": "=="
+        		}
 			]
 		}
 	}

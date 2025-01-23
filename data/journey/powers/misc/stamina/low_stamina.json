@@ -9,41 +9,7 @@
             "should_render": false
         }
     },
-    "overlay": {
-        "type": "origins:overlay",
-        "texture": "minecraft:textures/misc/nausea.png",
-        "red": 1,
-        "green": 0.0,
-        "blue": 0,
-        "strength": 0.5,
-        "draw_mode": "nausea",
-        "draw_phase": "above_hud",
-        "visible_in_third_person": true,
-        "hide_with_hud": false,
-        "condition": {
-            "type": "origins:resource",
-            "resource": "*:*_resource",
-            "compare_to": 1,
-            "comparison": "=="
-        }
-    },
-    "overlay_2": {
-    "type": "origins:overlay",
-    "texture": "minecraft:textures/misc/nausea.png",
-    "red": 0.7,
-    "green": 0.4,
-    "blue": 0.4,
-    "strength": 0.4,
-    "draw_mode": "nausea",
-    "draw_phase": "above_hud",
-    "visible_in_third_person": true,
-    "hide_with_hud": false,
-    "condition": {
-        "type": "origins:resource",
-        "resource": "journey:misc/stamina/stamina",
-        "compare_to": 100,
-        "comparison": "<"
-    }},
+
     "prevent_sprint": {
         "type": "origins:prevent_sprinting",
         "condition": {
@@ -53,6 +19,41 @@
             "comparison": "=="
         }
     },
+
+    "prevent_shield": {
+        "type": "origins:prevent_item_use",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "compare_to": 1,
+            "comparison": "=="
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:shield"
+            }
+        }
+    },
+
+    "prevent_jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "set_total",
+            "amount": 0
+        },
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "set": true
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "compare_to": 1,
+            "comparison": "=="
+        }
+    },
+    
     "speed": {
         "type": "origins:modify_attribute",
         "attribute": "minecraft:generic.movement_speed",
