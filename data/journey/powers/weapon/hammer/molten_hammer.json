@@ -1,0 +1,53 @@
+{
+    "type": "origins:multiple",
+    "description": "Nether based. Entities hit (both by the attack and AoE) are set on fire. Entities affected by AoE set on fire for shorter amount of time (AoE = 3 sec., Target = 5 sec.)",
+    
+    "damage": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:area_of_effect",
+                "radius": 2,
+                "shape": "sphere",
+                "bientity_action": {
+                    "type": "origins:damage",
+                    "amount": 6,
+                    "damage_type": "minecraft:player_attack"
+                }
+            }
+        }
+    },
+
+    "fire_target": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:set_on_fire",
+                "duration": 100
+            }
+        }
+    },
+
+    "fire_aoe": {
+        "type": "origins:action_on_hit",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:area_of_effect",
+                "radius": 2,
+                "shape": "sphere",
+                "bientity_action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:set_on_fire",
+                        "duration": 60
+                    }
+                }
+            }
+        }
+    },
+        
+    "hidden": true
+}

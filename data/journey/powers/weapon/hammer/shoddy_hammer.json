@@ -1,0 +1,18 @@
+{
+    "type": "origins:action_on_hit",
+    "description": "Wooden equivalent for the Hammer",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:area_of_effect",
+            "radius": 2,
+            "shape": "sphere",
+            "bientity_action": {
+                "type": "origins:damage",
+                "amount": 4,
+                "damage_type": "minecraft:player_attack"
+            }
+        }
+    },
+    "hidden": true
+}
